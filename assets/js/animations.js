@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
 const pathProd = '/meu-site'
 
 function loadOccupation() {
-    const texts = ["Programador", "Back-End Engineer", "Solutions Architect", "Freelancer", "Professor"];
+    const texts = ["Tech Lead", "FullStack-End Engineer", "Solutions Architect", "Professor", "Freelancer"];
     let index = 0;
     let isDeleting = false;
     let text = '';
@@ -59,13 +59,52 @@ function loadFavicon() {
     changeFavicon();
 }
 
-function generateQrCode() {
-    var link = "https://nubank.com.br/cobrar/5jweo/65764f66-3116-4c99-8e06-9145773b66f4";
-			
-    var qrCodeUrl = "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" + encodeURIComponent(link);
+// PIX
 
-    var img = document.createElement('img');
-    img.src = qrCodeUrl;
-    document.getElementById('qrcode')
-    .appendChild(img)
+var pixCodeText = "96b70a5b-6b8b-413e-bcdd-52ddcea37767";
+var pixCopyAndPast = "00020126810014BR.GOV.BCB.PIX013696b70a5b-6b8b-413e-bcdd-52ddcea377670219pix oriundo do site5204000053039865802BR5924Raylan Cordeiro de Souza6009SAO PAULO621405101mcHxOhIcB63049E50";
+
+function generateQrCode() {
+
+
+    var link = "https://nubank.com.br/cobrar/5jweo/6a03a91c-6fe9-4a39-bbef-f2f30ae25bc5";
+
+    document.getElementById("qrlink").href = link
+
+    new QRCode(document.getElementById("qrcode"), {
+        text: link,
+        width: 256,
+        height: 256,
+        colorDark : '#000000',
+        colorLight : '#ffffff',
+        correctLevel : QRCode.CorrectLevel.H
+    });
 }
+
+const keyCopyAndPast = document.getElementById('keyCopyAndPast');
+const pixKeyCopy = document.getElementById("pixKeyCopy");
+
+
+keyCopyAndPast.addEventListener('click', () => {
+
+    navigator.clipboard.writeText(pixCodeText)
+        .then(() => {
+            keyCopyAndPast.textContent = "Copiado!";
+            setTimeout(() => { keyCopyAndPast.textContent = "Copiar Chave PIX"; }, 1000);
+        })
+        .catch(err => {
+            console.error('Erro ao copiar:', err);
+        });
+});
+
+pixKeyCopy.addEventListener('click', () => {
+
+    navigator.clipboard.writeText(pixCopyAndPast)
+        .then(() => {
+            pixKeyCopy.textContent = "Copiado!";
+            setTimeout(() => { pixKeyCopy.textContent = "PIX copia e cola"; }, 1000);
+        })
+        .catch(err => {
+            console.error('Erro ao copiar:', err);
+        });
+});

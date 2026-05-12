@@ -49,7 +49,7 @@
 								</header>
 								<a href="#work" class="jumplink pic">
 									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-									<img src="images/me.jpeg" alt="" />
+									<img src="images/me.jpg" alt="" />
 								</a>
 							</article>
 
@@ -64,40 +64,43 @@
 								<section>
 									<div class="row">
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+											<a href="./images/pic00.jpg" class="image fit"><img src="images/pic00.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
+											<a href="./images/pic09.jpg" class="image fit"><img src="images/pic09.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
+											<a href="./images/pic10.jpg" class="image fit"><img src="images/pic10.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
+											<a href="./images/pic01.jpg" class="image fit"><img src="images/pic01.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
+											<a href="./images/pic02.jpg" class="image fit"><img src="images/pic02.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
+											<a href="./images/pic03.jpg" class="image fit"><img src="images/pic03.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
+											<a href="./images/pic04.jpg" class="image fit"><img src="images/pic04.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
+											<a href="./images/pic05.jpg" class="image fit"><img src="images/pic05.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
+											<a href="./images/pic06.jpg" class="image fit"><img src="images/pic06.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
+											<a href="./images/pic07.jpg" class="image fit"><img src="images/pic07.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+											<a href="./images/pic08.jpg" class="image fit"><img src="images/pic08.jpg" alt=""></a>
 										</div>
 										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
+											<a href="./images/pic11.jpg" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="./images/pic12.jpg" class="image fit"><img src="images/pic12.jpg" alt=""></a>
 										</div>
 									</div>
 								</section>
@@ -123,14 +126,19 @@
 							</article>
 
 						<!-- PIX -->
-							<article id="pix" class="panel">
+							<article id="pix" class="panel" style="position: relative; padding-bottom: 35px">
 								<header>
 									<h2>PIX</h2>
 								</header>
-								<a href="https://nubank.com.br/cobrar/5jweo/65764f66-3116-4c99-8e06-9145773b66f4">
+								<a id="qrlink" href="https://nubank.com.br/cobrar/5jweo/65764f66-3116-4c99-8e06-9145773b66f4">
 									<div id="qrcode"></div>
 								</a>
-								<div class="qr-code-message">*Toque ou escanei como um qr code comum, NÃO use o app do banco.</div>
+								<div style="text-align: center">
+									<button id="keyCopyAndPast">Copiar Chave PIX</button>
+									|
+									<button id="pixKeyCopy">PIX copia e cola</button>
+								</div>
+								<div class="container qr-code-message">*Toque ou escanei como um qr code comum, NÃO use o app do banco.</div>
 							</article>
 
 					</div>
@@ -145,12 +153,12 @@
 			</div>
 
 		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/animations.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
 	</body>
 </html>

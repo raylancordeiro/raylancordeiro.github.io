@@ -2019,7 +2019,7 @@ input, select, textarea {
 						-moz-object-position: center;
 						-webkit-object-position: center;
 						-ms-object-position: center;
-						object-position: center;
+						object-position: 50% 15%;
 					}
 
 					#main > .panel.intro .pic .arrow {
